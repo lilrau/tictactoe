@@ -241,3 +241,9 @@ footer {
     color: white;
     text-align: center;
 }
+
+@media (max-width: 999px) {
+    footer {
+        padding-top: 150%;
+    }
+}
