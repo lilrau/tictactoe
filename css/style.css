@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+header {
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: JetBrains Mono;
+}
+
+body {
+    background: #403d39;
+}
+
+.select-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px 25px 25px;
+    border-radius: 7px;
+    max-width: 330px;
+    width: 100%;
+    
+    /* display: none; */
+}
+
+.select-box.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.select-box header {
+    font-size: 23px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.select-box .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.select-box .option {
+    display: flex;
+    width: 100%;
+}
+
+.option button {
+    width: 80%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 0;
+    justify-content: space-around;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #403d39;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.playerX,
+.playerO {
+    margin: 3px;
+}
+
+.option button:hover, 
+.result-box .btn button:hover {
+    transform: scale(0.9);
+}
+
+.option button playerX {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.option button playerO {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.play-board {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.play-board.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.select-box, 
+.play-board, 
+.result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.play-board .details {
+    background: #fff;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.play-board .details .player{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+}
+
+.play-board .details span {
+    color: #403d39;
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: default;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.details span:first-child {
+    color: #fff;
+}
+
+.details .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #403d39;
+    border-radius: 5px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.player.active span:first-child {
+    color: #403d39;
+}
+
+.player.active span:nth-child(2) {
+    color: #fff;
+}
+
+.player.active .slider {
+    left: 50%;
+}
+
+.play-board .play-area {
+    margin-top: 20px;
+}
+
+.play-board section {
+    display: flex;
+    margin: 3px;
+}
+
+.play-board section span {
+    display: block;
+    margin: 3px;
+    height: 80px;
+    width: 80px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    color: #403d39;
+}
+
+.result-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.result-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result-box .won-text {
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.result-box .won-text p {
+    font-weight: 600;
+    margin: 0 3px;
+}
+
+.result-box btn {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.result-box .btn button {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    background-color: #403d39;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+footer {
+    padding-top: 45%;
+    position: static;
+    color: white;
+    text-align: center;
+}
