@@ -236,14 +236,10 @@ body {
 }
 
 footer {
-    padding-top: 45%;
-    position: static;
-    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    color: #fff;
     text-align: center;
-}
-
-@media (max-width: 999px) {
-    footer {
-        padding-top: 150%;
-    }
 }
